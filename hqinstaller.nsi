@@ -1,8 +1,8 @@
-/* Simple yet functional installer for the HalfQuake series of mods.
+/* Simple yet functional installer for the Halfquake series of mods.
  * Works only with installed Steam and Half-Life Steam Edition.
  *
  * Installer Copyright (C) 2014 Florian Stinglmayr <florian@n0la.org>
- * HalfQuake, HalfQuake: Amen, HalfQuake: Sunrise Copyright (C) 2001 Philipp Lehner <muddasheep@gmail.com>
+ * Halfquake, Halfquake: Amen, Halfquake: Sunrise Copyright (C) 2001 Philipp Lehner <muddasheep@gmail.com>
  */
  
 !include "LogicLib.nsh"
@@ -11,7 +11,7 @@
 !include "Sections.nsh"
 
 OutFile "hqinstaller.exe"
-Name "HalfQuake Installer"
+Name "Halfquake Trilogy"
 RequestExecutionLevel admin
 
 Var HalfLifePath
@@ -107,7 +107,7 @@ SectionGroup "Halfquake Series" HQSeries
       # Create uninstaller
       WriteUninstaller "$HalfLifePath\hquninstaller.exe"
     ${ELSE}
-      MessageBox MB_OK "No HalfQuake MOD selected :-("
+      MessageBox MB_OK "No Halfquake MOD selected :-("
       Quit
     ${ENDIF}
   SectionEnd
@@ -115,10 +115,10 @@ SectionGroup "Halfquake Series" HQSeries
 SectionGroupEnd
 
 !insertmacro MUI_FUNCTION_DESCRIPTION_BEGIN
-  !insertmacro MUI_DESCRIPTION_TEXT ${HQSeries} "The HalfQuake series."
-  !insertmacro MUI_DESCRIPTION_TEXT ${HQUAKE1} "The first installment of the series: HalfQuake."
-  !insertmacro MUI_DESCRIPTION_TEXT ${HQUAKE2} "HalfQuake: Amen. Now with 100% more sadism."
-  !insertmacro MUI_DESCRIPTION_TEXT ${HQUAKE3} "Pain and suffering brought to epic levels, with HalfQuake: Sunrise."
+  !insertmacro MUI_DESCRIPTION_TEXT ${HQSeries} "The Halfquake series."
+  !insertmacro MUI_DESCRIPTION_TEXT ${HQUAKE1} "The first installment of the series: Halfquake."
+  !insertmacro MUI_DESCRIPTION_TEXT ${HQUAKE2} "Halfquake: Amen. Now with 100% more sadism."
+  !insertmacro MUI_DESCRIPTION_TEXT ${HQUAKE3} "Pain and suffering brought to epic levels, with Halfquake: Sunrise."
 !insertmacro MUI_FUNCTION_DESCRIPTION_END
 
 
