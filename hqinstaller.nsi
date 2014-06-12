@@ -10,6 +10,8 @@
 !include "MUI2.nsh"
 !include "Sections.nsh"
 
+!define MUI_ICON "hq_trilogy.ico"
+
 OutFile "hqinstaller.exe"
 Name "Halfquake Trilogy"
 RequestExecutionLevel admin
@@ -65,8 +67,7 @@ SectionGroup "Halfquake Series" HQSeries
   
     SetOutPath "$HalfLifePath"
     File /r "hquake"
-    # Misuse HQA icon for the lack of a better icon :-/
-    CreateShortCut "$DESKTOP\Halfquake.lnk" "$HalfLifePath\hl.exe" "-game hquake" "$HalfLifePath\hquake2\hqa.ico" 0
+    CreateShortCut "$DESKTOP\Halfquake.lnk" "$HalfLifePath\hl.exe" "-game hquake" "$HalfLifePath\hquake\hq_icon.ico" 0
   SectionEnd
 
   Section "Halfquake: Amen" HQUAKE2
@@ -74,7 +75,7 @@ SectionGroup "Halfquake Series" HQSeries
   
     SetOutPath "$HalfLifePath"
     File /r "hquake2"
-    CreateShortCut "$DESKTOP\Halfquake: Amen.lnk" "$HalfLifePath\hl.exe" "-game hquake2" "$HalfLifePath\hquake2\hqa.ico" 0
+    CreateShortCut "$DESKTOP\Halfquake: Amen.lnk" "$HalfLifePath\hl.exe" "-game hquake2" "$HalfLifePath\hquake2\hqa_icon.ico" 0
   SectionEnd
 
   Section "Halfquake: Sunrise" HQUAKE3
@@ -82,7 +83,7 @@ SectionGroup "Halfquake Series" HQSeries
   
     SetOutPath "$HalfLifePath"
     File /r "hquake3"
-    CreateShortCut "$DESKTOP\Halfquake: Sunrise.lnk" "$HalfLifePath\hl.exe" "-game hquake3" "$HalfLifePath\hquake3\hqs.ico" 0
+    CreateShortCut "$DESKTOP\Halfquake: Sunrise.lnk" "$HalfLifePath\hl.exe" "-game hquake3" "$HalfLifePath\hquake3\hqs_icon.ico" 0
   SectionEnd
   
   # Hidden section for common files.
