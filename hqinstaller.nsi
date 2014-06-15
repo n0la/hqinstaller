@@ -11,6 +11,13 @@
 !include "Sections.nsh"
 
 !define MUI_ICON "hq_trilogy.ico"
+!define MUI_UNICON "hq_trilogy.ico"
+
+!define MUI_HEADERIMAGE
+!define MUI_HEADERIMAGE_RIGHT
+!define MUI_HEADERIMAGE_BITMAP "header_top.bmp"
+!define MUI_WELCOMEFINISHPAGE_BITMAP "header_left.bmp"
+!define MUI_BGCOLOR FFFFFF
 
 OutFile "hqinstaller.exe"
 Name "Halfquake Trilogy"
@@ -29,6 +36,7 @@ Var HalfLifePath
 
 !define MUI_FINISHPAGE_LINK "Visit The Farm for further information"
 !define MUI_FINISHPAGE_LINK_LOCATION "http://farm.muddasheep.com/"
+!define MUI_FINISHPAGE_TEXT "You are now ready to die multiple times!"
 
 Var NoSteam
 Var NoHalfLife
@@ -117,9 +125,9 @@ SectionGroupEnd
 
 !insertmacro MUI_FUNCTION_DESCRIPTION_BEGIN
   !insertmacro MUI_DESCRIPTION_TEXT ${HQSeries} "The Halfquake series."
-  !insertmacro MUI_DESCRIPTION_TEXT ${HQUAKE1} "The first installment of the series: Halfquake."
+  !insertmacro MUI_DESCRIPTION_TEXT ${HQUAKE1} "The first part of the series; how it all began."
   !insertmacro MUI_DESCRIPTION_TEXT ${HQUAKE2} "Halfquake: Amen. Now with 100% more sadism."
-  !insertmacro MUI_DESCRIPTION_TEXT ${HQUAKE3} "Pain and suffering brought to epic levels, with Halfquake: Sunrise."
+  !insertmacro MUI_DESCRIPTION_TEXT ${HQUAKE3} "Halfquake: Sunrise - Pain and suffering brought to ludicrous levels."
 !insertmacro MUI_FUNCTION_DESCRIPTION_END
 
 
